@@ -1,0 +1,29 @@
+ <!-- you can use router link to create navigation in your application consist of router DSL string at the minimum-->
+ <!-- this DSL can be a form of / notiation followed by the name of the route in routeConfig  -->
+ <!-- the / notation can other be a single forward slash ./ which point up to the root route (which looks the route is for current component)  -->
+ <!-- a pair of dots and a forward / ../which looks a route on the paret component of this current component -->
+<nav>
+    <a [routerLink]="['./List',{medium: ''}]">
+        <img src="media/04.png" class="icon" />
+    </a>
+    <a [routerLink]="['./List',{medium: 'Movies'}]">
+        <img src="media/03.png" class="icon" />
+    </a>
+    <a [routerLink]="['./List',{medium: 'Series'}]">
+        <img src="media/02.png" class="icon" />
+    </a>
+</nav>
+<section>
+    <header>
+        <h1>My App</h1>
+        <p class="description">keeping track of the media I want to watch.</p>
+        <p>maryam</p>
+    </header>
+    <!-- <media-item [mediaItem] = "firstMediaItem"
+    (deleted) = "onMediaItemDeleted($event)"></media-item> -->
+
+    <!-- before router -->
+    <!-- <media-item-form></media-item-form> -->
+    <!-- <media-item-list></media-item-list> -->
+    <router-outlet></router-outlet>
+</section>
